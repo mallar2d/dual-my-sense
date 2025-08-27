@@ -28,7 +28,7 @@ Quick notes:
 
 License: MIT
 
-Українська
+Українською
 ---------
 
 - Що це: маленький GUI для `dualsensectl` (написано на Rust + egui).
