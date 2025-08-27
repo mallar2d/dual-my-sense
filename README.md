@@ -1,23 +1,55 @@
-# Dual My Sense (Dualsensectl GUI)
+# Dual My Sense — simple DualSense GUI
 
-A simple Rust GUI wrapper around the `dualsensectl` CLI for Linux. It exposes most commands via a friendly interface built with `egui/eframe`.
+This is a small, simple GUI wrapper for the `dualsensectl` command-line tool.
+It provides an easy way to change lights, triggers and basic settings from a window on Linux.
 
-## Build & Run
+English
+-------
 
-Requires Rust (stable) and the `dualsensectl` binary available in PATH.
+- What: a tiny GUI for `dualsensectl` (built with Rust + egui).
+- Requirements: Rust (stable) and `dualsensectl` in your PATH.
+
+Build & run (from project folder):
 
 ```fish
-# from this folder
+# debug build
+cargo run
+
+# release build
 cargo run --release
 ```
 
-If `dualsensectl` needs udev permissions, follow the udev rules from its README.
+If `dualsensectl` needs extra permissions (udev rules), follow the instructions in the upstream `dualsensectl` README.
 
-## Notes
+Quick notes:
+- The device picker reads `dualsensectl -l`.
+- The log panel shows the commands that the GUI runs and their output.
+- Triggers tab has per-trigger settings and quick actions.
 
-- Device picker uses `dualsensectl -l` output; selecting "(auto)" omits `-d`.
-- Log panel shows commands and outputs.
-- Trigger tab supports common modes and a custom mode with free params.
-- Monitor can run without or with a shell command; it sets `$DS_DEV` so your command can detect the device.
+License: MIT
 
-MIT.
+Українська
+---------
+
+- Що це: маленький GUI для `dualsensectl` (написано на Rust + egui).
+- Потрібне: Rust (stable) та бінарний `dualsensectl` у PATH.
+
+Збірка та запуск (з папки проекту):
+
+```fish
+# збірка для розробки та запуск
+cargo run
+
+# збірка в релізному режимі
+cargo run --release
+```
+
+Якщо `dualsensectl` вимагає додаткових прав (udev), застосуйте правила з офіційного README `dualsensectl`.
+
+Коротко:
+- Список пристроїв читається через `dualsensectl -l`.
+- Панель логів показує команди та їхній вивід.
+- Вкладка тригерів має окремі налаштування для лівого і правого тригерів та швидкі дії.
+
+Ліцензія: MIT
+
